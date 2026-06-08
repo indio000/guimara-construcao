@@ -1,32 +1,44 @@
-/* Acessibilidade */
-:root {
-    --primary: #e65100;
-    --dark: #1a1a1a;
-    --light: #f8f9fa;
+/* Style.css - Versão Profissional */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
-.skip-link {
-    position: absolute;
-    left: -9999px;
-    top: 5px;
-    background: var(--primary);
+header {
+    background: #E65100;
     color: white;
-    padding: 8px 16px;
-    z-index: 100;
+    padding: 1rem;
 }
 
-.skip-link:focus {
-    left: 5px;
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
-/* High contrast focus */
-*:focus {
-    outline: 3px solid var(--primary);
-    outline-offset: 3px;
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/id/1015/1920/1080');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
 }
 
-/* More accessible CSS */
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Mais estilos virão... */
