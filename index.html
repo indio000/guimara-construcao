@@ -3,73 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guimara Construção - Pedreiro Profissional em Capanema PR</title>
+    
+    <title>Guimara Construção | Pedreiro Profissional em Capanema PR</title>
+    <meta name="description" content="Guimara Construção: Mais de 10 anos de experiência em reformas, alvenaria, pisos e porcelanatos em Capanema - PR. Solicite seu orçamento hoje mesmo!">
+    <meta name="keywords" content="pedreiro capanema pr, reforma residencial, construtor, assentamento de piso, guimara construção">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYydweMGUMFjkExpt3CuGl9csu2tBR2COqCUKbCwuXA64W82fuvKEbW8FhxtkwvaXcPf28A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
-    <header>
-        <div class="container">
+
+    <header class="main-header">
+        <div class="container header-wrapper">
             <div class="logo">
-                <h1>Guimara <span>Construção</span></h1>
+                <h1>Guimara <span class="highlight">Construção</span></h1>
             </div>
-            <nav>
+            
+            <nav class="main-nav" aria-label="Navegação principal">
                 <ul>
-                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html" class="active">Início</a></li>
                     <li><a href="servicos.html">Serviços</a></li>
                     <li><a href="clientes.html">Clientes</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
-            <a href="https://wa.me/5546999011578" target="_blank" class="btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> (46) 99901-1578
+
+            <a href="https://wa.me/5546999011578?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20obra." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-whatsapp">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i> (46) 99901-1578
             </a>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Construções e Reformas com Qualidade</h1>
-            <p>Pedreiro profissional em Capanema - PR. Alvenaria, Reformas, Pisos e muito mais.</p>
-            <a href="https://wa.me/5546999011578" target="_blank" class="btn-primary">Solicitar Orçamento</a>
-        </div>
-    </section>
+    <main>
+        <section class="hero" aria-label="Destaque">
+            <div class="hero-content">
+                <h2>Construções e Reformas com Excelência</h2>
+                <p>Pedreiro profissional em Capanema - PR. Especialista em alvenaria, reformas gerais, aplicação de pisos e acabamentos.</p>
+                <a href="https://wa.me/5546999011578?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn-primary">
+                   Solicitar Orçamento Grátis
+                </a>
+            </div>
+        </section>
 
-    <section class="sobre">
-        <div class="container">
-            <h2>Sobre Nós</h2>
-            <p>Guimara Construção é especializada em serviços de pedreiro, reformas residenciais e comerciais em Capanema e região. Com mais de 10 anos de experiência, entregamos qualidade, pontualidade e acabamento impecável.</p>
-        </div>
-    </section>
+        <section class="sobre section-padding">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Sobre Nós</h2>
+                </header>
+                <p>A <strong>Guimara Construção</strong> é referência em serviços de pedreiro, reformas residenciais e comerciais em Capanema e região. Com mais de 10 anos de experiência no mercado paranaense, nossa missão é entregar qualidade rigorosa, pontualidade britânica e um acabamento impecável que valoriza o seu imóvel.</p>
+            </div>
+        </section>
 
-    <section class="servicos">
-        <div class="container">
-            <h2>Nossos Serviços</h2>
-            <div class="grid">
-                <div class="card">
-                    <i class="fas fa-hard-hat"></i>
-                    <h3>Alvenaria</h3>
-                    <p>Construção de paredes, casas e sobrados.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-tools"></i>
-                    <h3>Reformas Gerais</h3>
-                    <p>Reforma completa de residências e comércios.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-layer-group"></i>
-                    <h3>Pisos e Revestimentos</h3>
-                    <p>Instalação de pisos cerâmicos, porcelanatos e mais.</p>
+        <section class="servicos section-padding">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Nossos Serviços</h2>
+                    <p>Soluções completas do alicerce ao acabamento</p>
+                </header>
+                
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-hard-hat" aria-hidden="true"></i>
+                        </div>
+                        <h3>Alvenaria</h3>
+                        <p>Construção estrutural de paredes, casas, sobrados e galpões comerciais com segurança e precisão.</p>
+                    </article>
+                    
+                    <article class="service-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-tools" aria-hidden="true"></i>
+                        </div>
+                        <h3>Reformas Gerais</h3>
+                        <p>Renovação completa ou parcial de ambientes residenciais e comerciais, adaptando o espaço às suas necessidades.</p>
+                    </article>
+                    
+                    <article class="service-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-layer-group" aria-hidden="true"></i>
+                        </div>
+                        <h3>Pisos e Revestimentos</h3>
+                        <p>Assentamento especializado de pisos cerâmicos, porcelanatos, pastilhas e revestimentos de alto padrão.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Guimara Construção - Capanema, PR</p>
-            <p>WhatsApp: <a href="https://wa.me/5546999011578">(46) 99901-1578</a></p>
+    <footer class="main-footer">
+        <div class="container footer-wrapper">
+            <div class="footer-info">
+                <p>&copy; 2026 Guimara Construção - Todos os direitos reservados.</p>
+                <p>Capanema - PR</p>
+            </div>
+            <div class="footer-contact">
+                <p>Fale Conosco via WhatsApp: 
+                    <a href="https://wa.me/5546999011578" target="_blank" rel="noopener noreferrer">(46) 99901-1578</a>
+                </p>
+            </div>
         </div>
     </footer>
+
 </body>
 </html>
