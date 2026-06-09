@@ -1,5 +1,8 @@
-/* Guimara Construção - Style.css Moderno e Profissional Otimizado */
+/* ==========================================================================
+   Guimara Construção - Style.css Moderno, Responsivo e Profissional
+   ========================================================================== */
 
+/* 1. Reset e Configurações Globais */
 * {
     margin: 0;
     padding: 0;
@@ -8,45 +11,100 @@
 
 :root {
     --primary: #E65100;
+    --primary-hover: #BF4300;
     --dark: #1a1a1a;
     --light: #f8f9fa;
     --gray: #555;
+    --white: #ffffff;
+    --transition: all 0.3s ease-in-out;
+    --radius: 6px;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     line-height: 1.7;
     color: var(--gray);
-    background-color: #fff;
-    /* Adicionado para compensar o header fixo sem quebrar o background do Hero */
-    padding-top: 80px; 
+    background-color: var(--white);
+    padding-top: 80px; /* Compensação do header fixo */
 }
 
 .container {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
 /* Links Globais */
 a {
     text-decoration: none;
     color: inherit;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
-/* Header */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ==========================================================================
+   2. Componentes Repetíveis (Botões e Títulos)
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-weight: 600;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   3. Header e Navegação
+   ========================================================================== */
 header {
     background: var(--dark);
-    color: white;
+    color: var(--white);
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    /* Altura controlada para bater com o padding-top do body */
+    box-shadow: var(--shadow);
     height: 80px; 
     display: flex;
     align-items: center;
@@ -56,16 +114,133 @@ header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 .logo h1 {
     font-size: 2.1rem;
     font-weight: 800;
-    color: white;
+    color: var(--white);
+    letter-spacing: -0.5px;
 }
 
 .logo span {
     color: var(--primary);
 }
 
+/* Organização do Menu Horizontal (Onde o código havia parado) */
 nav ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    align-items: center;
+}
+
+nav ul a {
+    font-weight: 500;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    position: relative;
+    padding: 8px 0;
+}
+
+/* Efeito de linha passando por baixo do link ao passar o mouse */
+nav ul a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary);
+    transition: var(--transition);
+}
+
+nav ul a:hover {
+    color: var(--white);
+}
+
+nav ul a:hover::after {
+    width: 100%;
+}
+
+/* ==========================================================================
+   4. Seções Sugeridas (Hero e Grid de Serviços)
+   ========================================================================== */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('sua-imagem-hero.jpg') center/cover no-repeat;
+    min-height: calc(80vh - 80px);
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services {
+    padding: 80px 0;
+    background-color: var(--light);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ==========================================================================
+   5. Responsividade (Media Queries)
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
+    header {
+        height: 70px;
+    }
+
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Oculta o menu padrão no mobile (ideal combinar com menu hambúrguer via JS) */
+    nav ul {
+        display: none; 
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
