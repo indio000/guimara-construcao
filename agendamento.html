@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Obra - Guimara Construção</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Guimara <span>Construção</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="clientes.html">Clientes</a></li>
+                    <li><a href="agendamento.html">Agendar Visita</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="https://wa.me/5546999011578" target="_blank" class="btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> (46) 99901-1578
+            </a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Agende seu Orçamento</h1>
+            <p>Preencha os dados abaixo para agendarmos uma visita técnica sem compromisso à sua obra.</p>
+        </div>
+    </section>
+
+    <section class="agendamento bg-light">
+        <div class="container">
+            <div class="form-container">
+                <form id="agendamentoForm">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" required placeholder="Digite seu nome completo">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone / WhatsApp:</label>
+                        <input type="tel" id="telefone" placeholder="(46) 99901-1578" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="endereco">Endereço da Obra:</label>
+                        <input type="text" id="endereco" required placeholder="Rua, número, bairro e cidade">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data">Data Preferencial da Visita:</label>
+                        <input type="date" id="data" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="servico">Tipo de Serviço:</label>
+                        <select id="servico" required>
+                            <option value="">Selecione o serviço principal...</option>
+                            <option value="Reformas">Reformas Residenciais</option>
+                            <option value="Alvenaria">Alvenaria e Estruturas</option>
+                            <option value="Pisos">Pisos e Revestimentos</option>
+                            <option value="Lajes">Lajes e Coberturas</option>
+                            <option value="Acabamento">Acabamentos Finos</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="descricao">Descrição Breve do Projeto:</label>
+                        <textarea id="descricao" required placeholder="Conte-nos o que você planeja fazer na sua casa ou terreno..."></textarea>
+                    </div>
+                    
+                    <button type="submit"><i class="far fa-calendar-check"></i> Solicitar Agendamento</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Guimara Construção - Capanema, PR</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('agendamentoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Solicitação enviada com sucesso! A Guimara Construção entrará em contato em breve para confirmar o horário.');
+        });
+    </script>
+</body>
+</html>
