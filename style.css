@@ -1,44 +1,218 @@
-/* Style.css - Versão Profissional */
+/* Guimara Construção - Style.css Moderno e Profissional */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --primary: #E65100;
+    --dark: #1a1a1a;
+    --light: #f8f9fa;
+    --gray: #555;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.7;
+    color: var(--gray);
+    background-color: #fff;
 }
 
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
 header {
-    background: #E65100;
+    background: var(--dark);
     color: white;
-    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 20px;
 }
 
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/id/1015/1920/1080');
-    background-size: cover;
+.logo h1 {
+    font-size: 2.1rem;
+    font-weight: 800;
     color: white;
-    text-align: center;
-    padding: 120px 20px;
 }
 
+.logo span {
+    color: var(--primary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+/* Botão WhatsApp */
 .btn-whatsapp {
     background: #25D366;
     color: white;
-    padding: 15px 30px;
-    text-decoration: none;
+    padding: 12px 28px;
     border-radius: 50px;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 20px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s;
 }
 
-/* Mais estilos virão... */
+.btn-whatsapp:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1486406146926-c627a392ad40') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    padding: 18px 50px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.4s;
+}
+
+.btn-primary:hover {
+    background: #c43e00;
+    transform: translateY(-6px);
+}
+
+/* Seções */
+section {
+    padding: 110px 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 4rem;
+    color: var(--dark);
+    position: relative;
+}
+
+h2:after {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 5px;
+    background: var(--primary);
+    margin: 20px auto 0;
+    border-radius: 3px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2.5rem;
+}
+
+.card {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.card i {
+    font-size: 4rem;
+    color: var(--primary);
+    margin-bottom: 1.8rem;
+}
+
+/* Footer */
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 4rem 0 2rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.6rem;
+    }
+    nav ul {
+        gap: 1rem;
+        font-size: 0.95rem;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Acessibilidade */
+:focus {
+    outline: 3px solid var(--primary);
+    outline-offset: 4px;
+}
+
+a {
+    transition: all 0.3s ease;
+}
